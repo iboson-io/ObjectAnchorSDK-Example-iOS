@@ -1,0 +1,6 @@
+framework module ObjectDetectionFramework {
+  umbrella header "ObjectDetectionFramework.h"
+  export *
+
+  module * { export * }
+}

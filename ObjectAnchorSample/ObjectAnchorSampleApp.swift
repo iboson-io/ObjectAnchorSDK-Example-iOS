@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+
 @main
 struct ObjectAnchorSampleApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

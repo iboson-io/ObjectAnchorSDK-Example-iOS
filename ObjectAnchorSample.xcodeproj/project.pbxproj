@@ -7,18 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B74116542D54908500F31170 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74116532D54908500F31170 /* ContentView.swift */; };
 		B78D28402D53A179005B64D9 /* ObjectAnchorSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D283F2D53A179005B64D9 /* ObjectAnchorSampleApp.swift */; };
-		B78D28422D53A179005B64D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D28412D53A179005B64D9 /* ContentView.swift */; };
 		B78D28442D53A17A005B64D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B78D28432D53A17A005B64D9 /* Assets.xcassets */; };
 		B78D28472D53A17A005B64D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B78D28462D53A17A005B64D9 /* Preview Assets.xcassets */; };
+		B78D284E2D53A1BE005B64D9 /* ARSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D284D2D53A1BE005B64D9 /* ARSceneView.swift */; };
+		B78D28562D53B03C005B64D9 /* template.pcd in Resources */ = {isa = PBXBuildFile; fileRef = B78D28552D53B03C005B64D9 /* template.pcd */; };
+		B7E3DF0A2E27ED62000CEC91 /* ObjectDetectionFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3DF082E27EBB2000CEC91 /* ObjectDetectionFramework.xcframework */; };
+		B7E3DF0B2E27ED62000CEC91 /* ObjectDetectionFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3DF082E27EBB2000CEC91 /* ObjectDetectionFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B78D28542D53A3A7005B64D9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B7E3DF0B2E27ED62000CEC91 /* ObjectDetectionFramework.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B74116532D54908500F31170 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B78D283C2D53A179005B64D9 /* ObjectAnchorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectAnchorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78D283F2D53A179005B64D9 /* ObjectAnchorSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAnchorSampleApp.swift; sourceTree = "<group>"; };
-		B78D28412D53A179005B64D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B78D28432D53A17A005B64D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B78D28462D53A17A005B64D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B78D284D2D53A1BE005B64D9 /* ARSceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSceneView.swift; sourceTree = "<group>"; };
+		B78D284F2D53A305005B64D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B78D28552D53B03C005B64D9 /* template.pcd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.pcd; sourceTree = "<group>"; };
+		B7E3DF082E27EBB2000CEC91 /* ObjectDetectionFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ObjectDetectionFramework.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E3DF0A2E27ED62000CEC91 /* ObjectDetectionFramework.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +74,14 @@
 		B78D283E2D53A179005B64D9 /* ObjectAnchorSample */ = {
 			isa = PBXGroup;
 			children = (
+				B78D284F2D53A305005B64D9 /* Info.plist */,
 				B78D283F2D53A179005B64D9 /* ObjectAnchorSampleApp.swift */,
-				B78D28412D53A179005B64D9 /* ContentView.swift */,
+				B74116532D54908500F31170 /* ContentView.swift */,
+				B78D284D2D53A1BE005B64D9 /* ARSceneView.swift */,
+				B78D28552D53B03C005B64D9 /* template.pcd */,
 				B78D28432D53A17A005B64D9 /* Assets.xcassets */,
 				B78D28452D53A17A005B64D9 /* Preview Content */,
+				B7E3DF082E27EBB2000CEC91 /* ObjectDetectionFramework.xcframework */,
 			);
 			path = ObjectAnchorSample;
 			sourceTree = "<group>";
@@ -77,6 +104,7 @@
 				B78D28382D53A179005B64D9 /* Sources */,
 				B78D28392D53A179005B64D9 /* Frameworks */,
 				B78D283A2D53A179005B64D9 /* Resources */,
+				B78D28542D53A3A7005B64D9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78D28562D53B03C005B64D9 /* template.pcd in Resources */,
 				B78D28472D53A17A005B64D9 /* Preview Assets.xcassets in Resources */,
 				B78D28442D53A17A005B64D9 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B78D28422D53A179005B64D9 /* ContentView.swift in Sources */,
 				B78D28402D53A179005B64D9 /* ObjectAnchorSampleApp.swift in Sources */,
+				B78D284E2D53A1BE005B64D9 /* ARSceneView.swift in Sources */,
+				B74116542D54908500F31170 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +304,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ObjectAnchorSample/Preview Content\"";
 				DEVELOPMENT_TEAM = 89YQW76HDA;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ObjectAnchorSample",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ObjectAnchorSample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Uses camera to capture depth and detect objects";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Save point cloud files for detection";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -303,7 +340,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ObjectAnchorSample/Preview Content\"";
 				DEVELOPMENT_TEAM = 89YQW76HDA;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ObjectAnchorSample",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ObjectAnchorSample/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Uses camera to capture depth and detect objects";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Save point cloud files for detection";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
