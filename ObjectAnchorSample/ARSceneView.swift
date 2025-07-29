@@ -42,7 +42,7 @@ actor ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
     }
     
     nonisolated func onInitialized() {
-        objectAnchorHelper.setDetectionConfig(detectionType: ObjectAnchor.DetectionType.POINTCLOUD, modelId: "model00012", token: "token")
+        objectAnchorHelper.setDetectionConfig(detectionType: ObjectAnchor.DetectionType.POINTCLOUD, modelId: "modelId", token: "token")
         objectAnchorHelper.startScan()
     }
     
@@ -62,7 +62,10 @@ actor ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
     
     nonisolated func onObjectTransformationUpdated(transformation: [Float]?) {
         print("onObjectTransformationUpdated")
-        //detectedNode.setWorldTransform(<#T##worldTransform: SCNMatrix4##SCNMatrix4#>)
+        let pos = objectAnchorHelper.getPosition(transformation: transformation)
+        let rot = objectAnchorHelper.getRotation(transformation: transformation)
+        detectedNode.worldPosition = pos
+        detectedNode.worldOrientation = rot
     }
     
     nonisolated func onStatusUpdated(status: String?) {
@@ -144,7 +147,7 @@ actor ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
             
             Task { @MainActor in
                 scenePointCloudNode.geometry = geometry
-                print("Detected Points updated \(pointCloud?.count)")
+                print("Scene Points updated \(pointCloud?.count)")
                 if(savePCDFile){
                     savePCDFile = false
                     await saveSceneAsPCD(from: pointCloud!)
