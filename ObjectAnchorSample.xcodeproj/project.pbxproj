@@ -12,7 +12,6 @@
 		B78D28442D53A17A005B64D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B78D28432D53A17A005B64D9 /* Assets.xcassets */; };
 		B78D28472D53A17A005B64D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B78D28462D53A17A005B64D9 /* Preview Assets.xcassets */; };
 		B78D284E2D53A1BE005B64D9 /* ARSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78D284D2D53A1BE005B64D9 /* ARSceneView.swift */; };
-		B78D28562D53B03C005B64D9 /* template.pcd in Resources */ = {isa = PBXBuildFile; fileRef = B78D28552D53B03C005B64D9 /* template.pcd */; };
 		B7E3DF0A2E27ED62000CEC91 /* ObjectDetectionFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3DF082E27EBB2000CEC91 /* ObjectDetectionFramework.xcframework */; };
 		B7E3DF0B2E27ED62000CEC91 /* ObjectDetectionFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7E3DF082E27EBB2000CEC91 /* ObjectDetectionFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		B78D28462D53A17A005B64D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B78D284D2D53A1BE005B64D9 /* ARSceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSceneView.swift; sourceTree = "<group>"; };
 		B78D284F2D53A305005B64D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		B78D28552D53B03C005B64D9 /* template.pcd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.pcd; sourceTree = "<group>"; };
 		B7E3DF082E27EBB2000CEC91 /* ObjectDetectionFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ObjectDetectionFramework.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +76,6 @@
 				B78D283F2D53A179005B64D9 /* ObjectAnchorSampleApp.swift */,
 				B74116532D54908500F31170 /* ContentView.swift */,
 				B78D284D2D53A1BE005B64D9 /* ARSceneView.swift */,
-				B78D28552D53B03C005B64D9 /* template.pcd */,
 				B78D28432D53A17A005B64D9 /* Assets.xcassets */,
 				B78D28452D53A17A005B64D9 /* Preview Content */,
 				B7E3DF082E27EBB2000CEC91 /* ObjectDetectionFramework.xcframework */,
@@ -153,7 +150,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B78D28562D53B03C005B64D9 /* template.pcd in Resources */,
 				B78D28472D53A17A005B64D9 /* Preview Assets.xcassets in Resources */,
 				B78D28442D53A17A005B64D9 /* Assets.xcassets in Resources */,
 			);
@@ -311,7 +307,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectAnchorSample/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Uses camera to capture depth and detect objects";
-				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Save point cloud files for detection";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -347,7 +342,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectAnchorSample/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Uses camera to capture depth and detect objects";
-				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Save point cloud files for detection";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

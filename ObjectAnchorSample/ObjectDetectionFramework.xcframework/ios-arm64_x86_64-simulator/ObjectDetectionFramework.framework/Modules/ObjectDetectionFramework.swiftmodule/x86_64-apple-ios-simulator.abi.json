@@ -44153,6 +44153,138 @@
       },
       {
         "kind": "Import",
+        "name": "SceneKit",
+        "printedName": "SceneKit",
+        "declKind": "Import",
+        "moduleName": "ObjectDetectionFramework"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PlaneMeshHelper",
+        "printedName": "PlaneMeshHelper",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "processPlaneAnchor",
+            "printedName": "processPlaneAnchor(_:spacing:cameraPosition:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SceneKit.SCNVector3]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SCNVector3",
+                    "printedName": "SceneKit.SCNVector3",
+                    "usr": "c:@S@SCNVector3"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ARPlaneAnchor",
+                "printedName": "ARKit.ARPlaneAnchor",
+                "usr": "c:objc(cs)ARPlaneAnchor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SIMD3",
+                "printedName": "Swift.SIMD3<Swift.Float>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:s5SIMD3V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:24ObjectDetectionFramework15PlaneMeshHelperC07processD6Anchor_7spacing14cameraPositionSaySo10SCNVector3VGSo07ARPlaneH0C_Sfs5SIMD3VySfGtFZ",
+            "mangledName": "$s24ObjectDetectionFramework15PlaneMeshHelperC07processD6Anchor_7spacing14cameraPositionSaySo10SCNVector3VGSo07ARPlaneH0C_Sfs5SIMD3VySfGtFZ",
+            "moduleName": "ObjectDetectionFramework",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PlaneMeshHelper",
+                "printedName": "ObjectDetectionFramework.PlaneMeshHelper",
+                "usr": "s:24ObjectDetectionFramework15PlaneMeshHelperC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:24ObjectDetectionFramework15PlaneMeshHelperCACycfc",
+            "mangledName": "$s24ObjectDetectionFramework15PlaneMeshHelperCACycfc",
+            "moduleName": "ObjectDetectionFramework",
+            "implicit": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:24ObjectDetectionFramework15PlaneMeshHelperC",
+        "mangledName": "$s24ObjectDetectionFramework15PlaneMeshHelperC",
+        "moduleName": "ObjectDetectionFramework",
+        "isOpen": true,
+        "declAttributes": [
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ObjectDetectionFramework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ARKit",
+        "printedName": "ARKit",
+        "declKind": "Import",
+        "moduleName": "ObjectDetectionFramework"
+      },
+      {
+        "kind": "Import",
         "name": "CoreVideo",
         "printedName": "CoreVideo",
         "declKind": "Import",
@@ -44163,6 +44295,66 @@
         "name": "PointCloud",
         "printedName": "PointCloud",
         "children": [
+          {
+            "kind": "Var",
+            "name": "processedAnchorList",
+            "printedName": "processedAnchorList",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ObjectDetectionFramework.PointCloud.ProcessedAnchorState]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProcessedAnchorState",
+                    "printedName": "ObjectDetectionFramework.PointCloud.ProcessedAnchorState",
+                    "usr": "s:24ObjectDetectionFramework10PointCloudC20ProcessedAnchorState33_B670C52CD9C2811B73751A610A879EF8LLV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24ObjectDetectionFramework10PointCloudC19processedAnchorList33_B670C52CD9C2811B73751A610A879EF8LLSayAC09ProcessedG5StateAELLVGvp",
+            "mangledName": "$s24ObjectDetectionFramework10PointCloudC19processedAnchorList33_B670C52CD9C2811B73751A610A879EF8LLSayAC09ProcessedG5StateAELLVGvp",
+            "moduleName": "ObjectDetectionFramework",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 0,
+            "hasStorage": true
+          },
+          {
+            "kind": "Var",
+            "name": "planeUpdateInterval",
+            "printedName": "planeUpdateInterval",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24ObjectDetectionFramework10PointCloudC19planeUpdateInterval33_B670C52CD9C2811B73751A610A879EF8LLSdvp",
+            "mangledName": "$s24ObjectDetectionFramework10PointCloudC19planeUpdateInterval33_B670C52CD9C2811B73751A610A879EF8LLSdvp",
+            "moduleName": "ObjectDetectionFramework",
+            "isInternal": true,
+            "declAttributes": [
+              "Final",
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 1,
+            "isLet": true,
+            "hasStorage": true
+          },
           {
             "kind": "Function",
             "name": "process",
@@ -44184,6 +44376,35 @@
             "usr": "s:24ObjectDetectionFramework10PointCloudC7process5frameySo7ARFrameC_tYaF",
             "mangledName": "$s24ObjectDetectionFramework10PointCloudC7process5frameySo7ARFrameC_tYaF",
             "moduleName": "ObjectDetectionFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "processNormalPointCloud",
+            "printedName": "processNormalPointCloud(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ARFrame",
+                "printedName": "ARKit.ARFrame",
+                "usr": "c:objc(cs)ARFrame"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:24ObjectDetectionFramework10PointCloudC013processNormaldE05frameySo7ARFrameC_tYaF",
+            "mangledName": "$s24ObjectDetectionFramework10PointCloudC013processNormaldE05frameySo7ARFrameC_tYaF",
+            "moduleName": "ObjectDetectionFramework",
+            "declAttributes": [
+              "RawDocComment"
+            ],
             "funcSelfKind": "NonMutating"
           },
           {
@@ -44684,7 +44905,7 @@
               "HasStorage",
               "SetterAccess"
             ],
-            "fixedbinaryorder": 0,
+            "fixedbinaryorder": 2,
             "hasStorage": true,
             "accessors": [
               {
@@ -52137,16 +52358,72 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/PlaneMeshHelper.swift",
+      "kind": "FloatLiteral",
+      "offset": 411,
+      "length": 4,
+      "value": "0.05"
+    },
+    {
+      "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/PlaneMeshHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4385,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/PlaneMeshHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4401,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/PlaneMeshHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4439,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/PlaneMeshHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4535,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/PlaneMeshHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4554,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/PointCloud.swift",
+      "kind": "Array",
+      "offset": 473,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/PointCloud.swift",
+      "kind": "FloatLiteral",
+      "offset": 528,
+      "length": 3,
+      "value": "5.0"
+    },
+    {
       "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/PointCloud.swift",
       "kind": "IntegerLiteral",
-      "offset": 4695,
+      "offset": 9994,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/PointCloud.swift",
       "kind": "Dictionary",
-      "offset": 5238,
+      "offset": 10537,
       "length": 3,
       "value": "[]"
     }

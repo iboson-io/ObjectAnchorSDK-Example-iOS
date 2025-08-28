@@ -24,19 +24,11 @@ struct ContentView: View {
             UIViewWrapper(view: arSceneView.sceneView).ignoresSafeArea()
             VStack {
                 Spacer()
-                Button(action: {
-                    // Action for the button
-                    print("Button pressed")
-                    arSceneView.savePCDFile = true
-                }) {
-                    Text("Save point cloud")
-                        .font(.title)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding()
+                Text(arSceneView.statusText)
+                    .font(.footnote)
+                    .padding()
+                    .foregroundColor(.white)
+                    .shadow(radius: 4)
             }
         }
     }

@@ -9,14 +9,17 @@ import Foundation
 import ARKit
 import ObjectDetectionFramework
 
-actor ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.ObjectAnchorDelegate{
+class ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.ObjectAnchorDelegate{
 
     @MainActor let sceneView = ARSCNView()
     @MainActor let objectAnchorHelper = ObjectAnchor()
     @MainActor let detectedNode = SCNNode()
     @MainActor let scenePointCloudNode = SCNNode()
     @MainActor let detectedPointCloudNode = SCNNode()
-    @MainActor var savePCDFile = false
+    @Published var statusText : String = "status"
+    
+    let modelId  = "modelId" //Add modelId from noxvision.ai
+    let apiKey  = "apiKey" //Add API key from noxvision.ai
     
     @MainActor
     override init() {
@@ -26,7 +29,11 @@ actor ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
 
         // start session
         let configuration = ARWorldTrackingConfiguration()
-        configuration.frameSemantics = .sceneDepth
+        if ARWorldTrackingConfiguration.supportsFrameSemantics(.sceneDepth) {
+            configuration.frameSemantics = .sceneDepth
+        } else {
+            configuration.planeDetection = [.horizontal, .vertical]
+        }
         sceneView.session.run(configuration)
         sceneView.scene.rootNode.addChildNode(detectedNode)
         sceneView.scene.rootNode.addChildNode(detectedPointCloudNode)
@@ -38,38 +45,49 @@ actor ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
     
     // an ARSessionDelegate function for receiving an ARFrame instances
     nonisolated func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        objectAnchorHelper.processFrame(frame: frame)
+        Task { @MainActor in
+            objectAnchorHelper.processFrame(frame: frame)
+        }
     }
     
     nonisolated func onInitialized() {
-        objectAnchorHelper.setDetectionConfig(detectionType: ObjectAnchor.DetectionType.POINTCLOUD, modelId: "modelId", token: "token")
-        objectAnchorHelper.startScan()
+        Task { @MainActor in
+            objectAnchorHelper.setDetectionConfig(detectionType: ObjectAnchor.DetectionType.POINTCLOUD, modelId: modelId, token: apiKey)
+            objectAnchorHelper.startScan()
+        }
     }
     
     nonisolated func onObjectPointsUpdated(points: [SCNVector3]?) {
         print("onObjectPointsFound")
         Task { @MainActor in
-            await drawDetectedPointCloud(pointCloud: points)
+            drawDetectedPointCloud(pointCloud: points)
         }
     }
     
     nonisolated func onScenePointsUpdated(points: [SCNVector3]?) {
         print("onScenePointsUpdated")
         Task { @MainActor in
-            await drawScenePointCloud(pointCloud: points)
+            drawScenePointCloud(pointCloud: points)
         }
     }
     
     nonisolated func onObjectTransformationUpdated(transformation: [Float]?) {
         print("onObjectTransformationUpdated")
-        let pos = objectAnchorHelper.getPosition(transformation: transformation)
-        let rot = objectAnchorHelper.getRotation(transformation: transformation)
-        detectedNode.worldPosition = pos
-        detectedNode.worldOrientation = rot
+        Task { @MainActor in
+            let pos = objectAnchorHelper.getPosition(transformation: transformation)
+            let rot = objectAnchorHelper.getRotation(transformation: transformation)
+            detectedNode.worldPosition = pos
+            detectedNode.worldOrientation = rot
+        }
     }
     
     nonisolated func onStatusUpdated(status: String?) {
-        print(status)
+        if let statusInfo = status{
+            print("status \(statusInfo)")
+            Task { @MainActor in
+                self.statusText = statusInfo
+            }
+        }
     }
     
     
@@ -148,54 +166,7 @@ actor ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
             Task { @MainActor in
                 scenePointCloudNode.geometry = geometry
                 print("Scene Points updated \(pointCloud?.count)")
-                if(savePCDFile){
-                    savePCDFile = false
-                    await saveSceneAsPCD(from: pointCloud!)
-                }
             }
-        }
-    }
-    
-    func saveSceneAsPCD(from points: [SCNVector3]){
-        let fileManager = FileManager.default
-        do {
-            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor:nil, create:false)
-            let fileURL = documentDirectory.appendingPathComponent("template")
-            writePCDFile(from: points, to: fileURL)
-        } catch {
-            print(error)
-        }
-    }
-    
-    func writePCDFile(from points: [SCNVector3], to fileURL: URL) {
-        // Header for PCD file (ASCII format)
-        var pcdHeader = "# .PCD v0.7 - Point Cloud Data file format\n"
-        pcdHeader += "VERSION 0.7\n"
-        pcdHeader += "FIELDS x y z\n"
-        pcdHeader += "SIZE 4 4 4\n"
-        pcdHeader += "TYPE F F F\n"
-        pcdHeader += "COUNT 1 1 1\n"
-        pcdHeader += "WIDTH \(points.count)\n"
-        pcdHeader += "HEIGHT 1\n"
-        pcdHeader += "VIEWPOINT 0 0 0 1 0 0 0\n"
-        pcdHeader += "POINTS \(points.count)\n"
-        pcdHeader += "DATA ascii\n"
-        
-        // Convert SCNVector3 points into ASCII format
-        var pcdPoints = ""
-        for point in points {
-            pcdPoints += "\(point.x) \(point.y) \(point.z)\n"
-        }
-
-        // Combine header and point data
-        let pcdContent = pcdHeader + pcdPoints
-        
-        do {
-            // Write to file
-            try pcdContent.write(to: fileURL, atomically: true, encoding: .utf8)
-            print("PCD file saved to \(fileURL.path)")
-        } catch {
-            print("Failed to save PCD file: \(error)")
         }
     }
 

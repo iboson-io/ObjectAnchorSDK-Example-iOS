@@ -8,6 +8,7 @@ import Dispatch
 import Foundation
 import Network
 @_exported import ObjectDetectionFramework
+import SceneKit
 import Swift
 import _Concurrency
 import _StringProcessing
