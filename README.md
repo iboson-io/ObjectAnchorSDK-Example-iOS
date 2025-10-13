@@ -22,14 +22,6 @@ ARSessionDelegate, ObjectAnchor.ObjectAnchorDelegate
         objectAnchorHelper.startScan()
     }
     
-    func onScenePointsUpdated(points: [SCNVector3]?) {
-       
-    }
-    
-    func onObjectPointsUpdated(objectPoints: [SCNVector3]?) {
-        
-    }
-    
     func onObjectTransformationUpdated(transformation: [Float]?) {
         
     }
