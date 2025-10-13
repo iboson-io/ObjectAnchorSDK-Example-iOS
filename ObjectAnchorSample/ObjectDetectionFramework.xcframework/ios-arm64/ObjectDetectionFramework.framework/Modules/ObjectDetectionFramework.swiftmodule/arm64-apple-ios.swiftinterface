@@ -3,6 +3,7 @@
 // swift-module-flags: -target arm64-apple-ios16.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature OpaqueTypeErasure -enable-bare-slash-regex -module-name ObjectDetectionFramework
 import ARKit
 import CommonCrypto
+import CoreImage
 import CoreVideo
 import Dispatch
 import Foundation
@@ -10,6 +11,7 @@ import Network
 @_exported import ObjectDetectionFramework
 import SceneKit
 import Swift
+import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -1032,8 +1034,6 @@ public class ObjectAnchor {
   @available(iOS 11.0, *)
   public protocol ObjectAnchorDelegate {
     func onInitialized()
-    func onScenePointsUpdated(points: [SceneKit.SCNVector3]?)
-    func onObjectPointsUpdated(points: [SceneKit.SCNVector3]?)
     func onStatusUpdated(status: Swift.String?)
     func onObjectTransformationUpdated(transformation: [Swift.Float]?)
   }

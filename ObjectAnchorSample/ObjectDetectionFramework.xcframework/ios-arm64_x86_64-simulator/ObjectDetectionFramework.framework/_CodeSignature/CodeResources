@@ -14,19 +14,19 @@
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		jncxGHwfBrDYi76PLb9FqYLzUpk=
+		pV4s3EZD0/piudXyAPxje7u5ano=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		rt/NkdX7UYndI+LgPGeNpNefOgE=
+		gDY3nIedJththUW0viwDnulxz00=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		oGbQgtY+nS9WhfulmmIWu/CEde0=
+		pAFF3crLFPaXEViwua//D8xAq9Q=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		QjPvRpDpGx8xKbm6UOwvO28ImJ8=
+		m4gkGE3UEpXF17EU9cZIbU4mKLI=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		QjPvRpDpGx8xKbm6UOwvO28ImJ8=
+		m4gkGE3UEpXF17EU9cZIbU4mKLI=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6L+CdXT2XvlxioH6IM+5DJUUL2U=
+		hUAU3DpBlhdB2p12oMvnsZk6Uq0=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		oGbQgtY+nS9WhfulmmIWu/CEde0=
+		pAFF3crLFPaXEViwua//D8xAq9Q=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		rKln3hy59vbWhH4rnpNlg7gfy3A=
+		NkfyWMIABHG/4u91I21bbpm7tV8=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		rKln3hy59vbWhH4rnpNlg7gfy3A=
+		NkfyWMIABHG/4u91I21bbpm7tV8=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		izc3j+w2ltd7icOa/yUzd/QMa/Q=
+		lxrPNdU5iI+GstmK34EgeVw93Ug=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,28 +78,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r3uUl/Yo6eJbVIUH3vlyN1xd/K9LG0SCzIPBdeeTn6k=
+			Palra3mrcspDTCtTekEdlVyfV2pJCUL0jQaRvbEyPq0=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sttGu/6J4cmSImH8avq71Q8PO6pd5X9aQN+EB9Tg98o=
+			8Eo29Q+7kmRg/NmcHMo/jw6sMZELPUWzXwrfVt4aQo4=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DLA+LgDj9ILpXYauYrzAJWJOZe/Tfo5jpN3hEKvdQZM=
+			sDCBuyQXzRM2tSeH+6t0I92dPWF5yVn85m7g2eGK9EE=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			12DedrUbI//CkDvMSJyWRMrv8txLh8QYyXnIsMeDQjE=
+			vqEjRF1/G+hjtn9t0oY2Lb3jvK1meOlSVTpvSyo7S6c=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -113,28 +113,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			12DedrUbI//CkDvMSJyWRMrv8txLh8QYyXnIsMeDQjE=
+			vqEjRF1/G+hjtn9t0oY2Lb3jvK1meOlSVTpvSyo7S6c=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			meIqL9R0fWO0z314m8HX77Z7XKZO+oWLjfOqgwgzRu0=
+			7T4UVkbFOgEjW5w4N/gkSii6MjmKSmjB2XjSbwYmnec=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DLA+LgDj9ILpXYauYrzAJWJOZe/Tfo5jpN3hEKvdQZM=
+			sDCBuyQXzRM2tSeH+6t0I92dPWF5yVn85m7g2eGK9EE=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7r4zysqweVMZgYNYD7Lh9Rgw2u664e1He7Q/LT5U7Ck=
+			Aod1tlTI+e7MN0HYiu0cZK0S1Wv47xhQFZtOzZRrQSE=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -148,14 +148,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7r4zysqweVMZgYNYD7Lh9Rgw2u664e1He7Q/LT5U7Ck=
+			Aod1tlTI+e7MN0HYiu0cZK0S1Wv47xhQFZtOzZRrQSE=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vxYew6T/XBxMYS7zjf18q/G/dRdoO0ubjdR52dugXq0=
+			XgWueqjHOOihRO86R7CquaqqdvfF8Xbma93P81zu0IQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

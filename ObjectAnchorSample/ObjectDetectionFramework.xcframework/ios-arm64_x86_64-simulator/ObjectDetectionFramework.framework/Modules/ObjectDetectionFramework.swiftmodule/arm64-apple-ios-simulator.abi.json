@@ -40122,6 +40122,20 @@
         "moduleName": "ObjectDetectionFramework"
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ObjectDetectionFramework"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreImage",
+        "printedName": "CoreImage",
+        "declKind": "Import",
+        "moduleName": "ObjectDetectionFramework"
+      },
+      {
         "kind": "TypeDecl",
         "name": "ObjectAnchor",
         "printedName": "ObjectAnchor",
@@ -40145,92 +40159,6 @@
                 "declKind": "Func",
                 "usr": "s:24ObjectDetectionFramework0A6AnchorC0aD8DelegateP13onInitializedyyF",
                 "mangledName": "$s24ObjectDetectionFramework0A6AnchorC0aD8DelegateP13onInitializedyyF",
-                "moduleName": "ObjectDetectionFramework",
-                "genericSig": "<τ_0_0 where τ_0_0 : ObjectDetectionFramework.ObjectAnchor.ObjectAnchorDelegate>",
-                "sugared_genericSig": "<Self where Self : ObjectDetectionFramework.ObjectAnchor.ObjectAnchorDelegate>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "funcSelfKind": "NonMutating"
-              },
-              {
-                "kind": "Function",
-                "name": "onScenePointsUpdated",
-                "printedName": "onScenePointsUpdated(points:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[SceneKit.SCNVector3]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[SceneKit.SCNVector3]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "SCNVector3",
-                            "printedName": "SceneKit.SCNVector3",
-                            "usr": "c:@S@SCNVector3"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Func",
-                "usr": "s:24ObjectDetectionFramework0A6AnchorC0aD8DelegateP20onScenePointsUpdated6pointsySaySo10SCNVector3VGSg_tF",
-                "mangledName": "$s24ObjectDetectionFramework0A6AnchorC0aD8DelegateP20onScenePointsUpdated6pointsySaySo10SCNVector3VGSg_tF",
-                "moduleName": "ObjectDetectionFramework",
-                "genericSig": "<τ_0_0 where τ_0_0 : ObjectDetectionFramework.ObjectAnchor.ObjectAnchorDelegate>",
-                "sugared_genericSig": "<Self where Self : ObjectDetectionFramework.ObjectAnchor.ObjectAnchorDelegate>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "funcSelfKind": "NonMutating"
-              },
-              {
-                "kind": "Function",
-                "name": "onObjectPointsUpdated",
-                "printedName": "onObjectPointsUpdated(points:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "[SceneKit.SCNVector3]?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[SceneKit.SCNVector3]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "SCNVector3",
-                            "printedName": "SceneKit.SCNVector3",
-                            "usr": "c:@S@SCNVector3"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Func",
-                "usr": "s:24ObjectDetectionFramework0A6AnchorC0aD8DelegateP02onA13PointsUpdated6pointsySaySo10SCNVector3VGSg_tF",
-                "mangledName": "$s24ObjectDetectionFramework0A6AnchorC0aD8DelegateP02onA13PointsUpdated6pointsySaySo10SCNVector3VGSg_tF",
                 "moduleName": "ObjectDetectionFramework",
                 "genericSig": "<τ_0_0 where τ_0_0 : ObjectDetectionFramework.ObjectAnchor.ObjectAnchorDelegate>",
                 "sugared_genericSig": "<Self where Self : ObjectDetectionFramework.ObjectAnchor.ObjectAnchorDelegate>",
@@ -43215,9 +43143,6 @@
             "mangledName": "$s24ObjectDetectionFramework0A6AnchorC19parseDataFromServeryySSF",
             "moduleName": "ObjectDetectionFramework",
             "isOpen": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
             "funcSelfKind": "NonMutating"
           },
           {
@@ -43380,70 +43305,6 @@
           },
           {
             "kind": "Function",
-            "name": "parseObjectPointCloudsFromServer",
-            "printedName": "parseObjectPointCloudsFromServer(stringData:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.Substring]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Substring",
-                    "printedName": "Swift.Substring",
-                    "usr": "s:Ss"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:24ObjectDetectionFramework0A6AnchorC05parseA21PointCloudsFromServer10stringDataySaySsG_tF",
-            "mangledName": "$s24ObjectDetectionFramework0A6AnchorC05parseA21PointCloudsFromServer10stringDataySaySsG_tF",
-            "moduleName": "ObjectDetectionFramework",
-            "isOpen": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "parseScenePointCloudsFromServer",
-            "printedName": "parseScenePointCloudsFromServer(stringData:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[Swift.Substring]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Substring",
-                    "printedName": "Swift.Substring",
-                    "usr": "s:Ss"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:24ObjectDetectionFramework0A6AnchorC31parseScenePointCloudsFromServer10stringDataySaySsG_tF",
-            "mangledName": "$s24ObjectDetectionFramework0A6AnchorC31parseScenePointCloudsFromServer10stringDataySaySsG_tF",
-            "moduleName": "ObjectDetectionFramework",
-            "isOpen": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "processFrame",
             "printedName": "processFrame(frame:)",
             "children": [
@@ -43471,18 +43332,24 @@
           },
           {
             "kind": "Function",
-            "name": "sendPointCloud",
-            "printedName": "sendPointCloud()",
+            "name": "sendImage",
+            "printedName": "sendImage(frame:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ARFrame",
+                "printedName": "ARKit.ARFrame",
+                "usr": "c:objc(cs)ARFrame"
               }
             ],
             "declKind": "Func",
-            "usr": "s:24ObjectDetectionFramework0A6AnchorC14sendPointCloudyyYaF",
-            "mangledName": "$s24ObjectDetectionFramework0A6AnchorC14sendPointCloudyyYaF",
+            "usr": "s:24ObjectDetectionFramework0A6AnchorC9sendImage5frameySo7ARFrameC_tYaF",
+            "mangledName": "$s24ObjectDetectionFramework0A6AnchorC9sendImage5frameySo7ARFrameC_tYaF",
             "moduleName": "ObjectDetectionFramework",
             "isOpen": true,
             "funcSelfKind": "NonMutating"
@@ -52311,49 +52178,49 @@
     {
       "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/ObjectAnchor.swift",
       "kind": "StringLiteral",
-      "offset": 1116,
+      "offset": 1028,
       "length": 5,
       "value": "\"ios\""
     },
     {
       "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/ObjectAnchor.swift",
       "kind": "Array",
-      "offset": 1174,
+      "offset": 1086,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/ObjectAnchor.swift",
       "kind": "Array",
-      "offset": 1230,
+      "offset": 1142,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/ObjectAnchor.swift",
       "kind": "Array",
-      "offset": 1269,
+      "offset": 1181,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/ObjectAnchor.swift",
       "kind": "BooleanLiteral",
-      "offset": 1303,
+      "offset": 1215,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/ObjectAnchor.swift",
       "kind": "BooleanLiteral",
-      "offset": 1337,
+      "offset": 1249,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/atul\/Projects\/iBoson\/IOS\/ObjectDetectionFramework\/ObjectDetectionFramework\/ObjectAnchor.swift",
       "kind": "BooleanLiteral",
-      "offset": 1422,
+      "offset": 1334,
       "length": 5,
       "value": "false"
     },

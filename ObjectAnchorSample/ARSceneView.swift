@@ -18,8 +18,8 @@ class ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
     @MainActor let detectedPointCloudNode = SCNNode()
     @Published var statusText : String = "status"
     
-    let modelId  = "modelId" //Add modelId from noxvision.ai
-    let apiKey  = "apiKey" //Add API key from noxvision.ai
+    let modelId  = "" //Add modelId from noxvision.ai
+    let apiKey  = "" //Add API key from noxvision.ai
     
     @MainActor
     override init() {
@@ -54,20 +54,6 @@ class ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
         Task { @MainActor in
             objectAnchorHelper.setDetectionConfig(detectionType: ObjectAnchor.DetectionType.POINTCLOUD, modelId: modelId, token: apiKey)
             objectAnchorHelper.startScan()
-        }
-    }
-    
-    nonisolated func onObjectPointsUpdated(points: [SCNVector3]?) {
-        print("onObjectPointsFound")
-        Task { @MainActor in
-            drawDetectedPointCloud(pointCloud: points)
-        }
-    }
-    
-    nonisolated func onScenePointsUpdated(points: [SCNVector3]?) {
-        print("onScenePointsUpdated")
-        Task { @MainActor in
-            drawScenePointCloud(pointCloud: points)
         }
     }
     
