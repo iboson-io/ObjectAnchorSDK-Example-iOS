@@ -14,12 +14,13 @@ class ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
     @MainActor let sceneView = ARSCNView()
     @MainActor let objectAnchorHelper = ObjectAnchor()
     @MainActor let detectedNode = SCNNode()
-    @MainActor let scenePointCloudNode = SCNNode()
-    @MainActor let detectedPointCloudNode = SCNNode()
-    @Published var statusText : String = "status"
+    @Published var statusText : String = ""
+    @Published var isScanning : Bool = false
     
     let modelId  = "" //Add modelId from noxvision.ai
     let apiKey  = "" //Add API key from noxvision.ai
+    
+    var step : Int = 1
     
     @MainActor
     override init() {
@@ -36,9 +37,8 @@ class ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
         }
         sceneView.session.run(configuration)
         sceneView.scene.rootNode.addChildNode(detectedNode)
-        sceneView.scene.rootNode.addChildNode(detectedPointCloudNode)
-        sceneView.scene.rootNode.addChildNode(scenePointCloudNode)
         createOriginAxis()
+        detectedNode.isHidden = true
         
         objectAnchorHelper.objectAnchorDelegate = self
     }
@@ -50,28 +50,40 @@ class ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
         }
     }
     
-    nonisolated func onInitialized() {
+    public func startScan(){
         Task { @MainActor in
-            objectAnchorHelper.setDetectionConfig(detectionType: ObjectAnchor.DetectionType.POINTCLOUD, modelId: modelId, token: apiKey)
             objectAnchorHelper.startScan()
+            isScanning = true
+            statusText = "Scanning..."
         }
     }
     
-    nonisolated func onObjectTransformationUpdated(transformation: [Float]?) {
-        print("onObjectTransformationUpdated")
+    nonisolated func onInitialized() {
         Task { @MainActor in
+            objectAnchorHelper.setDetectionConfig(modelId: modelId, token: apiKey)
+        }
+    }
+    
+    nonisolated func onDetected(transformation: [Float]?) {
+        print("onDetected")
+        Task { @MainActor in
+            isScanning = false
+            statusText = "Detected"
             let pos = objectAnchorHelper.getPosition(transformation: transformation)
             let rot = objectAnchorHelper.getRotation(transformation: transformation)
             detectedNode.worldPosition = pos
             detectedNode.worldOrientation = rot
+            detectedNode.isHidden = false
         }
     }
     
-    nonisolated func onStatusUpdated(status: String?) {
-        if let statusInfo = status{
-            print("status \(statusInfo)")
+    nonisolated func onFailed(error: String?) {
+        if let errorInfo = error{
+            print("\(errorInfo)")
             Task { @MainActor in
-                self.statusText = statusInfo
+                isScanning = false
+                statusText = errorInfo
+                self.statusText = errorInfo
             }
         }
     }
@@ -98,62 +110,6 @@ class ARSceneView: NSObject, ARSessionDelegate, ObservableObject, ObjectAnchor.O
         xCubeGeometry.firstMaterial?.diffuse.contents = UIColor.red
         yCubeGeometry.firstMaterial?.diffuse.contents = UIColor.green
         zCubeGeometry.firstMaterial?.diffuse.contents = UIColor.blue
-    }
-    
-    func drawDetectedPointCloud(pointCloud : [SCNVector3]?) {
-        
-        if(pointCloud != nil && pointCloud!.count > 0){
-            
-            // create a vertex source for geometry
-            let vertexSource = SCNGeometrySource(vertices: pointCloud! )
-            
-            // as we don't use proper geometry, we can pass just an array of
-            // indices to our geometry element
-            let pointIndices: [UInt32] = Array(0..<UInt32(pointCloud!.count))
-            let element = SCNGeometryElement(indices: pointIndices, primitiveType: .point)
-            
-            // here we can customize the size of the point, rendered in ARView
-            element.maximumPointScreenSpaceRadius = 10
-            
-            let geometry = SCNGeometry(sources: [vertexSource],
-                                       elements: [element])
-            geometry.firstMaterial?.isDoubleSided = true
-            geometry.firstMaterial?.lightingModel = .constant
-            geometry.firstMaterial?.diffuse.contents = UIColor.green
-            
-            Task { @MainActor in
-                detectedPointCloudNode.geometry = geometry
-                print("Detected Points updated \(pointCloud?.count)")
-            }
-        }
-    }
-    
-    func drawScenePointCloud(pointCloud : [SCNVector3]?) {
-        
-        if(pointCloud != nil && pointCloud!.count > 0){
-            
-            // create a vertex source for geometry
-            let vertexSource = SCNGeometrySource(vertices: pointCloud! )
-            
-            // as we don't use proper geometry, we can pass just an array of
-            // indices to our geometry element
-            let pointIndices: [UInt32] = Array(0..<UInt32(pointCloud!.count))
-            let element = SCNGeometryElement(indices: pointIndices, primitiveType: .point)
-            
-            // here we can customize the size of the point, rendered in ARView
-            element.maximumPointScreenSpaceRadius = 10
-            
-            let geometry = SCNGeometry(sources: [vertexSource],
-                                       elements: [element])
-            geometry.firstMaterial?.isDoubleSided = true
-            geometry.firstMaterial?.lightingModel = .constant
-            geometry.firstMaterial?.diffuse.contents = UIColor.yellow
-            
-            Task { @MainActor in
-                scenePointCloudNode.geometry = geometry
-                print("Scene Points updated \(pointCloud?.count)")
-            }
-        }
     }
 
     
