@@ -22,11 +22,11 @@ ARSessionDelegate, ObjectAnchor.ObjectAnchorDelegate
         objectAnchorHelper.startScan()
     }
     
-    func onObjectTransformationUpdated(transformation: [Float]?) {
+    func onDetected(transformation: [Float]?) {
         
     }
 
-    func onStatusUpdated(status: String?) {
+    func onFailed(status: String?) {
 
     }
 ```

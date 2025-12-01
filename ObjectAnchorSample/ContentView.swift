@@ -23,12 +23,25 @@ struct ContentView: View {
         ZStack{
             UIViewWrapper(view: arSceneView.sceneView).ignoresSafeArea()
             VStack {
-                Spacer()
                 Text(arSceneView.statusText)
                     .font(.footnote)
                     .padding()
                     .foregroundColor(.white)
                     .shadow(radius: 4)
+                Spacer()
+                
+                Button(action: {
+                    arSceneView.startScan()
+                }) {
+                    Text("Start Scan")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(arSceneView.isScanning ? Color.gray : Color.blue)
+                        .cornerRadius(10)
+                }
+                .disabled(arSceneView.isScanning)
+                .padding(.bottom, 30)
             }
         }
     }

@@ -14,27 +14,27 @@
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		hkTfICxpTJ4484kTkUQEGy4DtQw=
+		skgKD+Sm4FnDTtrTQbJZF0GuWVw=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		pAFF3crLFPaXEViwua//D8xAq9Q=
+		A/CbUvSa0aVXqeC/Mr1Hiw+OyUI=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Htz3tA2RZsp2lW4aG6upowJAo3o=
+		tcH9zoOdyuCoysMqmoCe4+cuU8g=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		nmGLQqsoSnB6qhIEXJUeOfW5JO4=
+		z+PFxqJAj8KNDWtlhWPGOTW31xc=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Htz3tA2RZsp2lW4aG6upowJAo3o=
+		tcH9zoOdyuCoysMqmoCe4+cuU8g=
 		</data>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		HUo90p8jERiCHqThq/yjjnhKL64=
+		Uasg7kmuMUgLecnV5GPKtoSEkQE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,42 +54,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UCTCqOf+uK3rUUnn3pcvd+bCAozOMgHn0VzvkT/VXWo=
+			/Rd0qlZfbOTpI+6koN858JBgjdv4tG7so5ksig58ISA=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sDCBuyQXzRM2tSeH+6t0I92dPWF5yVn85m7g2eGK9EE=
+			g0AIeOnUu1y3AzQIecRCPT9HjGvstx3eNX8sLo9xcA4=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+pAlTOG/GKc1yzas5A4l49UO4R8R4rh0qXxAjI8V82s=
+			1QXdxjmRDwX7pfvmzAxQBNcfdVxBbYNaBJ/1ztLlMgM=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			um7VACz2ZDaKpYvUjcTnBdpE6YvgSOupFCdIOOhdZqI=
+			EOArqpEiTxkMFvmstVIYEQh8iJjIp1sQqgsU7pfp3p8=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+pAlTOG/GKc1yzas5A4l49UO4R8R4rh0qXxAjI8V82s=
+			1QXdxjmRDwX7pfvmzAxQBNcfdVxBbYNaBJ/1ztLlMgM=
 			</data>
 		</dict>
 		<key>Modules/ObjectDetectionFramework.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BIqZnVLOtfg11Aif2+D2VFy5ICbRyRDu9EHdT7Vhwvg=
+			hNGK5dknMEKGg05kUFhP9mwUI6+QXT1hHCXkK9fIEBA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
