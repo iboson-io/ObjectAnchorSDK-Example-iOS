@@ -18,15 +18,19 @@ ARSessionDelegate, ObjectAnchor.ObjectAnchorDelegate
 
     func onInitialized(){
         // Fill the modelId and apiKey from https://noxvision.ai
-        objectAnchorHelper.setDetectionConfig(detectionType: ObjectAnchor.DetectionType.POINTCLOUD, modelId: modelId, token: apiKey)
-        objectAnchorHelper.startScan()
+        objectAnchorHelper.setDetectionConfig(modelId: modelId, token: apiKey)
     }
     
     func onDetected(transformation: [Float]?) {
         
     }
 
-    func onFailed(status: String?) {
+    func onFailed(error: String?) {
 
+    }
+
+    //Call startScan from a button click
+    public func startScan(){
+        objectAnchorHelper.startScan()
     }
 ```
